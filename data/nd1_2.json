@@ -1,0 +1,41 @@
+{
+  "status": 1,
+  "regular": [
+    {
+      "courseCode": "COM 121",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 122",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 123",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 124",
+      "courseUnit": "4.0"
+    },
+    {
+      "courseCode": "COM 125",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 126",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 127",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 126",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "GNS 121",
+      "courseUnit": "2.0"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "status": 1,
+  "regular": [
+    {
+      "courseCode": "COM 127",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 212",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 213",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 214",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 216",
+      "courseUnit": "2.0"
+    }
+  ],
+  "outstanding": [
+    {
+      "courseCode": "COM 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 121",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 122",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 123",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 126",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "MTH 112",
+      "courseUnit": "3.0"
+    }
+  ]
+}

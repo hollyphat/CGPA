@@ -1,0 +1,63 @@
+{
+  "status": 1,
+  "regular": [
+    {
+      "courseCode": "COM 412",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 413",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 414",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 417",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 416",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "STA 411",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 413",
+      "courseUnit": "3.0"
+    }
+  ],
+  "outstanding": [
+    {
+      "courseCode": "COM 311",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 312",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 313",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 314",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "OTM 315",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "STA 311",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "STA 314",
+      "courseUnit": "3.0"
+    }
+  ]
+}

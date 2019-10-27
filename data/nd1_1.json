@@ -1,0 +1,41 @@
+{
+  "status": 1,
+  "regular": [
+    {
+      "courseCode": "COM 101",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 113",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "GNS 111",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "MTH 111",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "MTH 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "OTM 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "STA 111",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "STA 112",
+      "courseUnit": "3.0"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "status": 1,
+  "regular": [
+    {
+      "courseCode": "COM 221",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 222",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 225",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 226",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 229",
+      "courseUnit": "4.0"
+    }
+  ],
+  "outstanding": [
+    {
+      "courseCode": "COM 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 121",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 122",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 123",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 126",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "MTH 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 127",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 212",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 213",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 214",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 216",
+      "courseUnit": "2.0"
+    }
+  ]
+}

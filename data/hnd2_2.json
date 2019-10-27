@@ -1,0 +1,63 @@
+{
+  "status": 1,
+  "regular": [
+    {
+      "courseCode": "COM 426",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 422",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 423",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 424",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 425",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 429",
+      "courseUnit": "6.0"
+    }
+  ],
+  "outstanding": [
+    {
+      "courseCode": "COM 321",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 322",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 323",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 324",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 326",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "OTM 412",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "STA 321",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 415",
+      "courseUnit": "3.0"
+    }
+  ]
+}
