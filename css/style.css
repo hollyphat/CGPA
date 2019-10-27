@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('../font/Raleway.ttf') format("opentype");
+}
+
+html,body{
+	font-family: 'Raleway';
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#links{
+	position: fixed;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.page-1{
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.row {
+	margin-bottom: 4px;
+}
+
+
+.list-block .item-content {
+	min-height: 20px !important;
+}
+
+.list-block .item-inner{
+	min-height: 20px !important;
+}
+
+p{
+	margin: 8px auto !important;
+}
+
+.list-block{
+	margin: 8px 0 0 0 !important;
+}
+
+.cgpa-list{
+	margin-bottom: 8px;
+}
