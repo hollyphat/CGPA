@@ -472,6 +472,142 @@ semester_gpa = [];
         });
 	});
 
+
+
+
+myApp.onPageInit('all_gpa',function(page){
+    //alert("Ko shi lo...");
+
+    let file = sessionStorage.getItem("file")+".json";
+    let level = sessionStorage.getItem("names");
+    $.ajax({
+        url: 'data/'+file,
+        dataType: 'json',
+        type: 'get',
+        success: function (f) {
+            let c = f.regular;
+            let the_str = "";
+            for(var k = 0; k < c.length; k++){
+
+                var r = `<li>
+	          <div class="item-content">
+	             <div class="item-inner">
+	             	<p>`+c[k].courseCode+`</p>
+	                <div class="row">
+	                	<div class="col-60">
+			                <div class="item-input">
+			                   <input type="number" placeholder="Score" class="score_in score1" maxlength="2">
+			                </div>
+	                	</div>
+
+	                	<div class="col-40">			                
+			                <div class="unit_in unit1">`+c[k].courseUnit+`</div>			               
+	                	</div>
+	                </div>
+	             </div>
+	          </div>
+	       </li>`;
+
+                //console.log(r);
+
+                the_str += r;
+                i += 1;
+            }
+
+            $$("#the-courses").append(the_str);
+        }
+    });
+
+
+    $$('.calculate-gp').on('click', function (e) {
+        e.preventDefault();
+
+
+        let k = 0;
+        $(".score_in").each(function( index ) {
+            //console.log( index + ": " + $( this ).val() );
+
+
+            //console.log( $(".unit_in").eq(index).val() );
+
+
+            scores_array[k] = $(".score_in").eq(index).val();
+            unit_array[k] = $(".unit_in").eq(index).text()
+
+            if(isNaN(scores_array[k])){
+                myApp.alert('Kindly enter a numeric value for all scores', 'Error');
+                return false;
+                //
+            }
+
+            if(isNaN(unit_array[k])){
+                myApp.alert('Kindly enter a numeric value in all text box', 'Error');
+                return false;
+                //
+            }
+
+            if(scores_array[k] == ""){
+                myApp.alert('Please fill all fields', 'Error');
+                return false;
+            }
+
+            if(unit_array[k] == ""){
+                myApp.alert('Please fill all fields', 'Error');
+                return false;
+                return;
+            }
+
+            let the_score = $(".score_in").eq(index).val();
+            let the_unit = $(".unit_in").eq(index).text();
+
+            if(the_score == ""){
+                myApp.alert('Please fill all fields', 'Error');
+                return false;
+                return;
+            }
+
+            var this_point = units(parseFloat(the_score)) * parseFloat(the_unit);
+
+            if(this_point == 0){
+                oc_list += 1;
+            }
+            point_array[k] = this_point;
+            total_point += point_array[k];
+            total_units += parseFloat(the_unit);
+            total_scores += parseFloat(the_score);
+        });
+        //return;
+
+
+        gpa = total_point/total_units;
+        gpa = Math.round(gpa * 100) / 100;
+
+        var semesterGrade = grades(gpa);
+        if(oc_list == 0) {
+            myApp.alert('Your Semester GPA is ' + gpa + '<br> Semester Grade is ' + semesterGrade, 'GPA Result');
+        }else{
+            myApp.alert('Your Semester GPA is ' + gpa + '<br> Semester Grade is ' + semesterGrade, 'GPA Result' + '<br>Outstanding courses : '+oc_list);
+        }
+
+        /*
+        RETURN VARIABLES
+         */
+        total_units = 0;
+        total_scores = 0;
+        total_point = 0;
+        course_code_array = [];
+        scores_array = [];
+        unit_array = [];
+        point_array = [];
+        oc_list = 0;
+        i = 1;
+
+        //$$('.added').remove();
+        $$('.score1').val('');
+        //$$('.unit1').val('');
+    });
+});
+
 	function units(score){
 	var ct;	
 	if((score>=75) && (score<=100)){
