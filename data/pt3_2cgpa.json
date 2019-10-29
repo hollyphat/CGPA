@@ -1,0 +1,183 @@
+{
+  "status": 1,
+  "regular": [
+    {
+      "courseCode": "COM 221",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 222",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 225",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 226",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 229",
+      "courseUnit": "4.0"
+    },
+    {
+      "courseCode": "COM 211",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 215",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 216",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 223",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 224",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 127",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 212",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 213",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 214",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 216",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "COM 124",
+      "courseUnit": "4.0"
+    },
+    {
+      "courseCode": "COM 125",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 126",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "GNS 128",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "OTM 217",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 121",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 122",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 123",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 126",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "MTH 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 101",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 113",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "GNS 127",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "MTH 111",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "OTM 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "STA 111",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "STA 112",
+      "courseUnit": "3.0"
+    }
+  ],
+  "outstanding": [
+    {
+      "courseCode": "COM 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 121",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 122",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 123",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 126",
+      "courseUnit": "2.0"
+    },
+    {
+      "courseCode": "MTH 112",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 127",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 212",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 213",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "COM 214",
+      "courseUnit": "3.0"
+    },
+    {
+      "courseCode": "EED 216",
+      "courseUnit": "2.0"
+    }
+  ]
+}
