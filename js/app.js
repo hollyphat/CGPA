@@ -7,11 +7,15 @@ var course_code_array;
 var scores_array;
 var unit_array;
 var point_array;
+var oc_array;
 var total_point = 0;
 course_code_array = [];
 scores_array = [];
 unit_array = [];
 point_array = [];
+oc_array = [];
+
+let oc_list = 0;
 
 var i = 1;
 
@@ -82,8 +86,7 @@ semester_gpa = [];
 
 		$$('.calculate-gp').on('click', function (e) {
 			e.preventDefault();
-			//console.log(i);
-			//						
+
 			for(var k = 1; k<= i; k++){
 				//console.log($("[data-course='"+k+"']").val());
 				//add course,score and unit to array
@@ -120,8 +123,6 @@ semester_gpa = [];
 				total_scores += parseFloat($$('.score'+k).val());
 			}
 
-			//console.log("Total scores ="+total_scores);
-			//console.log("Total units ="+ total_units);
 			gpa = total_point/total_units;
 			gpa = Math.round(gpa * 100) / 100;
 
@@ -140,17 +141,7 @@ semester_gpa = [];
 			point_array = [];
 			i = 1;
 
-
-			/*
-			REMOVE ALL ADDED INPUT
-			 */			
-			$$('.added').remove();
-
-			/*
-			RESET FIRST INPUT
-			 */
-			
-			$$('.course1').val('');
+			//$$('.added').remove();
 			$$('.score1').val('');
 			$$('.unit1').val('');
 		});
@@ -348,8 +339,133 @@ semester_gpa = [];
 			$$("#add-semester-course").click();
 		});
 	});
-		
 
+
+	myApp.onPageInit('nd1_1',function(page){
+		//alert("Ko shi lo...");
+
+		$.ajax({
+			url: 'data/nd1_1.json',
+			dataType: 'json',
+			type: 'get',
+			success: function (f) {
+				let c = f.regular;
+				let the_str = "";
+				for(var k = 0; k < c.length; k++){
+
+					var r = `<li>
+	          <div class="item-content">
+	             <div class="item-inner">
+	             	<p>`+c[k].courseCode+`</p>
+	                <div class="row">
+	                	<div class="col-60">
+			                <div class="item-input">
+			                   <input type="number" placeholder="Score" class="score_in score1" maxlength="2">
+			                </div>
+	                	</div>
+
+	                	<div class="col-40">
+			                <div class="item-input">
+			                   <input type="number" class="unit_in unit1" maxlength="1" class="form-control" required="" placeholder="Unit" readonly value="`+c[k].courseUnit+`">
+			                </div>
+	                	</div>
+	                </div>
+	             </div>
+	          </div>
+	       </li>`;
+
+					//console.log(r);
+
+                    the_str += r;
+                    i += 1;
+				}
+
+				$$("#the-courses").append(the_str);
+            }
+		});
+
+
+        $$('.calculate-gp').on('click', function (e) {
+            e.preventDefault();
+
+
+            let k = 0;
+            $(".score_in").each(function( index ) {
+                //console.log( index + ": " + $( this ).val() );
+
+
+                //console.log( $(".unit_in").eq(index).val() );
+
+
+                scores_array[k] = $(".score_in").eq(index).val();
+                unit_array[k] = $(".unit_in").eq(index).val()
+
+                if(isNaN(scores_array[k])){
+                    myApp.alert('Kindly enter a numeric value in all text box', 'Error');
+                    return false;
+                    //
+                }
+
+                if(isNaN(unit_array[k])){
+                    myApp.alert('Kindly enter a numeric value in all text box', 'Error');
+                    return false;
+                    //
+                }
+
+                if(scores_array[k] == ""){
+                    myApp.alert('Please fill all fields', 'Error');
+                    return false;
+                }
+
+                if(unit_array[k] == ""){
+                    myApp.alert('Please fill all fields', 'Error');
+                    return false;
+                }
+
+                let the_score = $(".score_in").eq(index).val();
+                let the_unit = $(".unit_in").eq(index).val()
+
+                var this_point = units(parseFloat(the_score)) * parseFloat(the_unit);
+
+                if(this_point == 0){
+                    oc_list += 1;
+                }
+                point_array[k] = this_point;
+                total_point += point_array[k];
+                total_units += parseFloat(the_unit);
+                total_scores += parseFloat(the_score);
+            });
+            //return;
+
+
+            gpa = total_point/total_units;
+            gpa = Math.round(gpa * 100) / 100;
+
+            var semesterGrade = grades(gpa);
+            if(oc_list == 0) {
+                myApp.alert('Your Semester GPA is ' + gpa + '<br> Semester Grade is ' + semesterGrade, 'GPA Result');
+            }else{
+                myApp.alert('Your Semester GPA is ' + gpa + '<br> Semester Grade is ' + semesterGrade, 'GPA Result' + "<br>Outstanding courses :"+oc_list);
+            }
+
+            /*
+            RETURN VARIABLES
+             */
+            total_units = 0;
+            total_scores = 0;
+            total_point = 0;
+            course_code_array = [];
+            scores_array = [];
+            unit_array = [];
+            point_array = [];
+            oc_list = 0;
+            i = 1;
+
+            //$$('.added').remove();
+            $$('.score1').val('');
+            //$$('.unit1').val('');
+        });
+	});
 
 	function units(score){
 	var ct;	
