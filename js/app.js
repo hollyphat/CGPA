@@ -364,10 +364,8 @@ semester_gpa = [];
 			                </div>
 	                	</div>
 
-	                	<div class="col-40">
-			                <div class="item-input">
-			                   <input type="number" class="unit_in unit1" maxlength="1" class="form-control" required="" placeholder="Unit" readonly value="`+c[k].courseUnit+`">
-			                </div>
+	                	<div class="col-40">			                
+			                <div class="unit_in unit1">`+c[k].courseUnit+`</div>			               
 	                	</div>
 	                </div>
 	             </div>
@@ -398,10 +396,10 @@ semester_gpa = [];
 
 
                 scores_array[k] = $(".score_in").eq(index).val();
-                unit_array[k] = $(".unit_in").eq(index).val()
+                unit_array[k] = $(".unit_in").eq(index).text()
 
                 if(isNaN(scores_array[k])){
-                    myApp.alert('Kindly enter a numeric value in all text box', 'Error');
+                    myApp.alert('Kindly enter a numeric value for all scores', 'Error');
                     return false;
                     //
                 }
@@ -420,10 +418,17 @@ semester_gpa = [];
                 if(unit_array[k] == ""){
                     myApp.alert('Please fill all fields', 'Error');
                     return false;
+                    return;
                 }
 
                 let the_score = $(".score_in").eq(index).val();
-                let the_unit = $(".unit_in").eq(index).val()
+                let the_unit = $(".unit_in").eq(index).text();
+
+                if(the_score == ""){
+                    myApp.alert('Please fill all fields', 'Error');
+                    return false;
+                    return;
+                }
 
                 var this_point = units(parseFloat(the_score)) * parseFloat(the_unit);
 
@@ -445,7 +450,7 @@ semester_gpa = [];
             if(oc_list == 0) {
                 myApp.alert('Your Semester GPA is ' + gpa + '<br> Semester Grade is ' + semesterGrade, 'GPA Result');
             }else{
-                myApp.alert('Your Semester GPA is ' + gpa + '<br> Semester Grade is ' + semesterGrade, 'GPA Result' + "<br>Outstanding courses :"+oc_list);
+                myApp.alert('Your Semester GPA is ' + gpa + '<br> Semester Grade is ' + semesterGrade, 'GPA Result' + '<br>Outstanding courses : '+oc_list);
             }
 
             /*
