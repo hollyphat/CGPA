@@ -46,7 +46,9 @@ semester_gpa = [];
 	
 	var $$=Dom7;
 	var mainView=myApp.addView('.view-main',{dynamicNavbar:true});
-	
+	//
+
+
 	myApp.onPageInit('gpa',function(page){
 
 		$$('.create-page').on('click',function(){
@@ -474,12 +476,21 @@ semester_gpa = [];
 
 
 
+myApp.onPageInit('all-level',function(page){
+    $(".next-class").on("click",function (e) {
+        sessionStorage.setItem("file", $(this).data("file"));
+        sessionStorage.setItem("names", $(this).data("names"));
+    })
+});
+
 
 myApp.onPageInit('all_gpa',function(page){
     //alert("Ko shi lo...");
 
     let file = sessionStorage.getItem("file")+".json";
     let level = sessionStorage.getItem("names");
+
+    $(".file_name").html(level);
     $.ajax({
         url: 'data/'+file,
         dataType: 'json',

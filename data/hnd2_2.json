@@ -2,10 +2,6 @@
   "status": 1,
   "regular": [
     {
-      "courseCode": "COM 426",
-      "courseUnit": "3.0"
-    },
-    {
       "courseCode": "COM 422",
       "courseUnit": "3.0"
     },
