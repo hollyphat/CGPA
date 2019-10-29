@@ -586,8 +586,14 @@ myApp.onPageInit('all_gpa',function(page){
             total_point += point_array[k];
             total_units += parseFloat(the_unit);
             total_scores += parseFloat(the_score);
+            k++;
         });
         //return;
+
+        if(total_scores == 0){
+            //myApp.alert('Kindly enter a numeric value for all scores', 'Error');
+            return false;
+        }
 
 
         gpa = total_point/total_units;
