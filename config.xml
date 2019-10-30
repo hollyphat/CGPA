@@ -6,10 +6,10 @@
         id        = "ng.com.fpe.pc"
         version   = "2.0.1">
 
-    <name>Point Calculator</name>
+    <name>CGPA Calculator</name>
 
     <description>
-        GPA and CGPA Calculator
+        GPA and CGPA Mobile Calculator
     </description>
 
     <author href="http://onlinemedia.com.ng" email="admin@onlinemedia.com.ng">
