@@ -672,7 +672,7 @@ myApp.onPageInit('all_cgpa',function(page){
         }
     });
 
-
+    let is_error = false;
     $$('.calculate-gp').on('click', function (e) {
         e.preventDefault();
 
@@ -690,31 +690,34 @@ myApp.onPageInit('all_cgpa',function(page){
 
             if(isNaN(scores_array[k])){
                 myApp.alert('Kindly enter a numeric value for all scores', 'Error');
+                is_error = true;
                 return false;
+                //break;
                 //
             }
 
-            if(isNaN(unit_array[k])){
+            /*if(isNaN(unit_array[k])){
                 myApp.alert('Kindly enter a numeric value in all text box', 'Error');
                 return false;
                 //
-            }
+            }*/
 
             if(scores_array[k] == ""){
                 myApp.alert('Please fill all fields', 'Error');
+                is_error = true;
                 return false;
             }
 
-            if(unit_array[k] == ""){
+            /*if(unit_array[k] == ""){
                 myApp.alert('Please fill all fields', 'Error');
                 return false;
                 return;
-            }
+            }*/
 
             let the_score = $(".score_in").eq(index).val();
             let the_unit = $(".unit_in").eq(index).text();
 
-            if(the_score == ""){
+            if(is_error == true){
                 myApp.alert('Please fill all fields', 'Error');
                 return false;
                 return;
