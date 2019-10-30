@@ -575,7 +575,7 @@ myApp.onPageInit('all_gpa',function(page){
             let the_unit = $(".unit_in").eq(index).text();
 
             if(is_error == true){
-                myApp.alert('Please fill all fields', 'Error');
+                //myApp.alert('Please fill all fields', 'Error');
                 return false;
                 return;
             }
@@ -594,7 +594,7 @@ myApp.onPageInit('all_gpa',function(page){
         //return;
 
         if(is_error == true){
-            myApp.alert('Please fill all fields', 'Error');
+            //myApp.alert('Please fill all fields', 'Error');
             return false;
             return;
         }
@@ -723,7 +723,7 @@ myApp.onPageInit('all_cgpa',function(page){
             let the_unit = $(".unit_in").eq(index).text();
 
             if(is_error == true){
-                myApp.alert('Please fill all fields', 'Error');
+                //myApp.alert('Please fill all fields', 'Error');
                 return false;
                 return;
             }
@@ -741,7 +741,7 @@ myApp.onPageInit('all_cgpa',function(page){
         });
         //return;
 
-        if(total_scores == 0){
+        if(is_error == true){
             //myApp.alert('Kindly enter a numeric value for all scores', 'Error');
             return false;
         }
